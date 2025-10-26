@@ -38,8 +38,9 @@ public class MainActivity extends AppCompatActivity {
         String end = counter%10>1 && counter%10<5 && counter/10%10!=1 ? " раза" : " раз";
         String text = "Потапали "+counter+end;
         textBottom.setText(text);
-        end = counter%10>1 && counter%10<5 && counter/10%10!=1 ? " раза" : " раз";
-        text = "Натапали "+counter+end;
+        int coins = counter/10;
+        end = coins%10>1 && coins%10<5 && coins/10%10!=1 ? " рубля" : " рублей";
+        text = "Натапали "+coins+end;
         textCoins.setText(text);
         if(counter>10) imgHare.setImageResource(R.drawable.hare2);
         if(counter>20) imgHare.setImageResource(R.drawable.hare3);
