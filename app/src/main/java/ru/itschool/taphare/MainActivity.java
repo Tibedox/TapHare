@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     int counter;
     ImageView imgHare;
     TextView textTop, textBottom;
+    TextView textCoins;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         imgHare = findViewById(R.id.imageHare);
         textTop = findViewById(R.id.textTop);
         textBottom = findViewById(R.id.textBottom);
+        textCoins = findViewById(R.id.textCoin);
     }
 
     public void tapHare(View view) {
@@ -36,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         String end = counter%10>1 && counter%10<5 && counter/10%10!=1 ? " раза" : " раз";
         String text = "Потапали "+counter+end;
         textBottom.setText(text);
+        end = counter%10>1 && counter%10<5 && counter/10%10!=1 ? " раза" : " раз";
+        text = "Натапали "+counter+end;
+        textCoins.setText(text);
         if(counter>10) imgHare.setImageResource(R.drawable.hare2);
         if(counter>20) imgHare.setImageResource(R.drawable.hare3);
         if(counter>30) imgHare.setImageResource(R.drawable.hare4);
