@@ -1,6 +1,5 @@
 package ru.itschool.taphare;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        imgHare = findViewById(R.id.imageView);
+        imgHare = findViewById(R.id.imageHare);
         textTop = findViewById(R.id.textTop);
         textBottom = findViewById(R.id.textBottom);
     }
