@@ -38,12 +38,16 @@ public class MainActivity extends AppCompatActivity {
         String end = counter%10>1 && counter%10<5 && counter/10%10!=1 ? " раза" : " раз";
         String text = "Потапали "+counter+end;
         textBottom.setText(text);
+
         int coins = counter/10;
-        end = coins%10>1 && coins%10<5 && coins/10%10!=1 ? " рубля" : " рублей";
+        if(coins%10==1 && coins/10%10!=1) end = " рубль";
+        else if (coins%10>1 && coins%10<5 && coins/10%10!=1) end = " рубля";
+        else end = " рублей";
         text = "Натапали "+coins+end;
         textCoins.setText(text);
-        if(counter>10) imgHare.setImageResource(R.drawable.hare2);
-        if(counter>20) imgHare.setImageResource(R.drawable.hare3);
-        if(counter>30) imgHare.setImageResource(R.drawable.hare4);
+
+        if(counter>30) imgHare.setImageResource(R.drawable.hare2);
+        if(counter>60) imgHare.setImageResource(R.drawable.hare3);
+        if(counter>90) imgHare.setImageResource(R.drawable.hare4);
     }
 }
