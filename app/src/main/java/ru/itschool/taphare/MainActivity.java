@@ -1,5 +1,6 @@
 package ru.itschool.taphare;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -36,5 +37,8 @@ public class MainActivity extends AppCompatActivity {
         String end = counter%10>1 && counter%10<5 && counter/10%10!=1 ? " раза" : " раз";
         String text = "Потапали "+counter+end;
         textBottom.setText(text);
+        if(counter>10) imgHare.setImageResource(R.drawable.hare2);
+        if(counter>20) imgHare.setImageResource(R.drawable.hare3);
+        if(counter>30) imgHare.setImageResource(R.drawable.hare4);
     }
 }
